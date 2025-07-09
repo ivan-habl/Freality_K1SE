@@ -127,5 +127,6 @@ python3 mcu_util.py -b -br 921600 -i /dev/ttyS1 -u -f ~/klipper/outfw/noz_klippe
 ```bash
 cd ~ && git clone https://github.com/ivan-habl/Freality_K1SE.git
 source ~/klipper/klippy-env/bin/activate
-ip install --no-index --find-links=~/Freality_K1SE/wheels numpy matplotlib scip
+sudo apt install libblas-dev liblapack-dev
+pip install --no-index --find-links=~/Freality_K1SE/wheels numpy matplotlib scip
 ```
