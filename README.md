@@ -103,6 +103,8 @@ python3 mcu_util.py -c -i /dev/ttyS1 -u -f ~/klipper/outfw/noz_klipper.bin
 Новые бинарники поддерживают вход в загрузчик по команде и далее прошивать можно по команде
 
 ```bash
+sudo systemctl stop klipper
+
 python3 mcu_util.py -b -br 921600 -i /dev/ttyS7 -u -f ~/klipper/outfw/mcu_klipper.bin -v
 
 python3 mcu_util.py -b -br 921600 -i /dev/ttyS9 -u -f ~/klipper/outfw/bed_klipper.bin -v
@@ -125,5 +127,5 @@ python3 mcu_util.py -b -br 921600 -i /dev/ttyS1 -u -f ~/klipper/outfw/noz_klippe
 ```bash
 cd ~ && git clone https://github.com/ivan-habl/Freality_K1SE.git
 source ~/klipper/klippy-env/bin/activate
-pip wheel --wheel-dir=~/Freality_K1SE/wheels numpy matplotlib scipy
+ip install --no-index --find-links=~/Freality_K1SE/wheels numpy matplotlib scip
 ```
