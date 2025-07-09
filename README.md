@@ -125,8 +125,12 @@ python3 mcu_util.py -b -br 921600 -i /dev/ttyS1 -u -f ~/klipper/outfw/noz_klippe
 Нам нужно установить в виртуальное окружение klippy-env предварительно кросс-скомпилированные библиотеки для поддержки визуализации частотных характеристик: numpy matplotlib scipy (на плате принтера они компилировались бы сутками).
 
 ```bash
-cd ~ && git clone https://github.com/ivan-habl/Freality_K1SE.git
-source ~/klipper/klippy-env/bin/activate
+cd ~
+git clone https://github.com/ivan-habl/Freality_K1SE.git
+sudo apt update
 sudo apt install libblas-dev liblapack-dev
-pip install --no-index --find-links=~/Freality_K1SE/wheels numpy matplotlib scip
+source ~/klipper/klippy-env/bin/activate
+pip install --no-index --no-deps \
+    --find-links=~/Freality_K1SE/wheels \
+    numpy matplotlib scipy
 ```
