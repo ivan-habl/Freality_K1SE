@@ -61,7 +61,7 @@ repositories:
 
 ```bash
 cd ~/klipper
-./buld.sh
+./build.sh
 ```
 
 В папке klipper/outfw появятся файлы прошивок
